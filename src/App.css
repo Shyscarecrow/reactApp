@@ -1,0 +1,101 @@
+.App {
+  text-align: center;
+  max-width: 1177px;
+  margin: 0 auto;
+}
+
+
+.App-header {
+  background: url(header.png) no-repeat;
+  min-height: 300px;
+  padding: 20px;
+  color: white;
+  
+}
+
+.App-footer {
+  background: #3D383E; 
+  height: 50px;
+  padding: 5px 20px;
+  
+}
+
+.App-title {
+  font-size: 1.5em;
+  text-align: left;
+  color: #dc143c;
+  padding-left: 50px;
+}
+
+.search-container {
+	padding: 20px 50px;
+	text-align: justify;
+}
+
+.search-title {
+	text-align: left;
+}
+
+.search-button {
+	background-color: #dc143c;
+	margin: 10px;
+	border: none;
+	width: 10em;
+	height: 2em;
+	color: white;
+	display: inline-block;
+	margin-right: 0;
+	
+}
+
+.search-field {
+	background-color: black;
+	color: white;
+	border: none;
+	border-bottom: 2px solid #dc143c;
+	display: block;
+	width: 900px;
+	height: 40px;
+}
+.sort-by {
+	display: inline;
+}
+
+.sort-button {
+	color: white;
+	border: none;
+	width: 6em;
+	height: 1.5em;
+	margin: 10px;
+	background-color: #3D383E;
+}
+
+.sort-button-default {
+	background-color: #dc143c;
+}	
+
+.results-information {
+	background-color: #CDCACD;
+	padding: 15px 40px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.results-information span{
+	margin: 10px;
+}
+
+.default-color {
+	color: #dc143c;
+}
+
+.no-results {
+	min-height: 450px;
+	color: black;
+	font-size: 5em;
+	margin-top: 1em;
+}
+
+
+
+
