@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 class Movies extends Component {
-	constructor(props) {
-		super(props);
-	}
+	
   render() {
 	  
 	const movies = this.props.movies;
