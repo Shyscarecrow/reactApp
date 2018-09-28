@@ -4,12 +4,9 @@ import './App.css';
 class Movies extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			movies: []
-		}
 	}
   render() {
-	  
+	const movies = this.props.movies;
     return (
       <div>
 		<div className="results-information">
@@ -23,11 +20,11 @@ class Movies extends Component {
 			</div>
 		</div>
 		<div className="movies-container">
-			{(!this.state.movies.lenght)
+			{(!movies.lenght)
           ? (<div className="no-results"><span>No films found</span></div>)
           : (<div className="results-movies"> 
-				 /*{this.state.movies.map(movie =>
-			<div key={movie.id} className="film" onclick={this.pageChanger}>
+				/*{movies.map(movie =>
+				<div key={movie.id} className="film" onclick={this.pageChanger}>
 				<img src={movie[poster-path]} className="film-poster-mini" alt="Movie poster" />
 				<span className="film-title">{movie.title}</span>
 				<span className="film-release-date">{movie[release-date]}</span>

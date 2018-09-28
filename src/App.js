@@ -8,7 +8,8 @@ class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			page: 'search'
+			page: 'search',
+			movies: []
 		}
 	}
   render() {
@@ -23,7 +24,7 @@ class App extends Component {
           <h1 className="App-title">netflixroulette</h1>
 		  <Search />
         </header>
-		< Movies />
+		< Movies movies={this.state.movies}/>
 		<footer className="App-footer">
 		<h1 className="App-title">netflixroulette</h1>
 		</footer>
