@@ -25,7 +25,15 @@ class Movies extends Component {
 		<div className="movies-container">
 			{(!this.state.movies.lenght)
           ? (<div className="no-results"><span>No films found</span></div>)
-          : <div></div>
+          : (<div className="results-movies"> 
+				 /*{this.state.movies.map(movie =>
+			<div key={movie.id} className="film" onclick={this.pageChanger}>
+				<img src={movie[poster-path]} className="film-poster-mini" alt="Movie poster" />
+				<span className="film-title">{movie.title}</span>
+				<span className="film-release-date">{movie[release-date]}</span>
+				<span className="film-genre">{movie.genres}</span>
+			</div>)} */
+		</div>)
          }
 		</div>
       </div>
