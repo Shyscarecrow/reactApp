@@ -3,6 +3,9 @@ import './App.css';
 
 class FilmDetails extends Component {
   render() {
+	  
+	const movie = this.props.movies;
+	  
     return (
       <div className="film-details">
 		

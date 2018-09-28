@@ -9,20 +9,24 @@ class App extends Component {
 		super(props);
 		this.state = {
 			page: 'search',
-			movies: []
+			movies: [],
+			id: null
 		}
+		this.pageChanger = this.pageChanger.bind(this);
+	}
+	
+	pageChanger(event){
+		let newId = event.target.id;
+		this.setState({page: 'film', id: {newId}})
 	}
   render() {
-	  
-	function pageChanger(){
-		this.setState({page: 'film'})
-	}
-	  
+	  	
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">netflixroulette</h1>
-		  <Search />
+		  {(this.state.page == 'search') ? <Search /> : <FilmDetails movies={this.state.movies} 
+		  clickon={(event)=>this.pageChanger(event)}/>}
         </header>
 		< Movies movies={this.state.movies}/>
 		<footer className="App-footer">

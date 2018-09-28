@@ -6,7 +6,9 @@ class Movies extends Component {
 		super(props);
 	}
   render() {
+	  
 	const movies = this.props.movies;
+	
     return (
       <div>
 		<div className="results-information">
@@ -23,14 +25,8 @@ class Movies extends Component {
 			{(!movies.lenght)
           ? (<div className="no-results"><span>No films found</span></div>)
           : (<div className="results-movies"> 
-				/*{movies.map(movie =>
-				<div key={movie.id} className="film" onclick={this.pageChanger}>
-				<img src={movie[poster-path]} className="film-poster-mini" alt="Movie poster" />
-				<span className="film-title">{movie.title}</span>
-				<span className="film-release-date">{movie[release-date]}</span>
-				<span className="film-genre">{movie.genres}</span>
-			</div>)} */
-		</div>)
+				
+			</div>)
          }
 		</div>
       </div>
