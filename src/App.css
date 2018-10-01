@@ -64,15 +64,13 @@
 .sort-button {
 	color: white;
 	border: none;
+	outline: none;
 	width: 6em;
 	height: 1.5em;
 	margin: 10px;
 	background-color: #3D383E;
 }
 
-.sort-button-default {
-	background-color: #dc143c;
-}	
 
 .results-information {
 	background-color: #CDCACD;
@@ -89,11 +87,19 @@
 	color: #dc143c;
 }
 
+.default-background {
+	background-color: #dc143c;
+}
+
 .no-results {
 	min-height: 450px;
 	color: black;
 	font-size: 5em;
 	margin-top: 1em;
+}
+
+.sort-span {
+	cursor: pointer;
 }
 
 

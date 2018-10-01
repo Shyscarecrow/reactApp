@@ -3,6 +3,7 @@ import './App.css';
 import Sort from './Sort';
 
 class Search extends Component {
+  
   render() {
     return (
       <div className="search-container">

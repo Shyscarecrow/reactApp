@@ -7,16 +7,26 @@ class Movies extends Component {
 	  
 	const movies = this.props.movies;
 	
+	function toggleSort(event){
+		if (event.target.id === 'sort-rating') {
+			event.target.classList.add('default-color');
+			document.getElementById('sort-release-date').classList.remove('default-color');
+		} else {
+			event.target.classList.add('default-color');
+			document.getElementById('sort-rating').classList.remove('default-color');
+		}
+			
+	}
     return (
       <div>
 		<div className="results-information">
 			<div className="films-quantity">
-				<span><span id="total-quantity">7</span> movies found</span>
+				<span><span id="total-quantity">{movies.length}</span> movies found</span>
 			</div>
 			<div className="results-sort-by">
 				<span>Sort by</span>
-				<span>release date</span>
-				<span className="default-color">rating</span>
+				<span id="sort-release-date" className="sort-span" onClick={toggleSort}>release date</span>
+				<span id="sort-rating" className=" sort-span default-color"onClick={toggleSort} >rating</span>
 			</div>
 		</div>
 		<div className="movies-container">
