@@ -11,6 +11,8 @@ class FilmDetails extends Component {
       <div className="film-details">
 		<span className="film-title">{movie.title}</span>
 		<span className="film-genre">{movie.genres}</span>
+		<img src={movie.poster_path} className="film-poster-midi" alt="Movie poster" />
+		<span className="film-release-date">{movie.release_date}</span>
 	  </div>
     );
   }

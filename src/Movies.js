@@ -5,7 +5,7 @@ class Movies extends Component {
 	
   render() {
 	  
-	const movies = this.props.movies;
+	const movies = this.props.movies.sort();
 	
 	function toggleSort(event){
 		if (event.target.id === 'sort-rating') {
@@ -30,15 +30,15 @@ class Movies extends Component {
 			</div>
 		</div>
 		<div className="movies-container">
-			{(movies.lenght == 0)
+			{(movies.lenght === 0)
           ? (<div className="no-results"><span>No films found</span></div>)
           : (<div className="results-movies"> 
 			{movies.map(movie =>
-				<div key={movie.id} className="film" id={movie.id}>
+				<div key={movie.id} className="film" id={movie.id} onClick={this.props.clickon} >
 				<img src={movie.poster_path} className="film-poster-mini" alt="Movie poster"/><br />
 				<span className="film-title">{movie.title}</span><br />
-				<span className="film-release-date">{movie.release_date}</span><br />
-				<span className="film-genre">{movie.genres}</span>
+				<span className="film-release-date">{movie.release_date.split('-')[0]}</span><br />
+				<span className="film-genre">{movie.genres.join(' & ')}</span>
 			</div>)} 	
 			</div>)
          }
