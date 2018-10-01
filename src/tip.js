@@ -31,3 +31,9 @@ toggleSearch(event){
 			title.classList.remove('default-background');
 		}
 	}
+	
+	
+	
+	
+	
+	onclick={props.clickon}

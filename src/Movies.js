@@ -30,10 +30,16 @@ class Movies extends Component {
 			</div>
 		</div>
 		<div className="movies-container">
-			{(!movies.lenght)
+			{(movies.lenght == 0)
           ? (<div className="no-results"><span>No films found</span></div>)
           : (<div className="results-movies"> 
-				
+			{movies.map(movie =>
+				<div key={movie.id} className="film" id={movie.id}>
+				<img src={movie.poster_path} className="film-poster-mini" alt="Movie poster"/><br />
+				<span className="film-title">{movie.title}</span><br />
+				<span className="film-release-date">{movie.release_date}</span><br />
+				<span className="film-genre">{movie.genres}</span>
+			</div>)} 	
 			</div>)
          }
 		</div>

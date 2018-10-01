@@ -54,7 +54,7 @@
 	border: none;
 	border-bottom: 2px solid #dc143c;
 	display: block;
-	width: 900px;
+	max-width: 900px;
 	height: 40px;
 }
 .sort-by {
@@ -98,9 +98,27 @@
 	margin-top: 1em;
 }
 
-.sort-span {
+.sort-span,
+.sort-button,
+.search-button {
 	cursor: pointer;
 }
+
+.film-poster-mini {
+	width: 300px;
+}
+
+.results-movies {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.film {
+	content: justify;
+	margin: 20px;
+}
+
+
 
 
 
