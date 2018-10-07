@@ -2,20 +2,26 @@ import React, { Component } from 'react';
 import './App.css';
 import Sort from './Sort';
 
-class Search extends Component {
+class Search extends Component { 
+	constructor(props) {
+		super(props);
+		this.state = {
+			searchOption: "title"
+		}
+	}
   
-  render() {
-    return (
-      <div className="search-container">
-		<p className="search-title">FIND YOUR MOVIE</p>
-        <form>
-			<input className="search-field" type="search" name="q" placeholder="Movie" /> 
-			<Sort />
-			<button className ="search-button" type="button">SEARCH</button>
-		</form>
-      </div>
-    );
-  }
+	render() {
+		return (
+        <div className="search-container">
+			<p className="search-title">FIND YOUR MOVIE</p>
+			<form>
+				<input className="search-field" type="search" name="q" placeholder="Movie" /> 
+				<Sort />
+				<button className ="search-button" type="button">SEARCH</button>
+			</form>
+		</div>
+		);
+	}
 }
 
 export default Search;
