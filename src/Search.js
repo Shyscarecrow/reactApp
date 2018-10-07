@@ -7,6 +7,14 @@ class Search extends Component {
 		this.state = {
 			searchOption: "title"
 		}
+		this.sortHandler = this.sortHandler.bind(this);
+	}
+	
+	sortHandler(event){
+		this.setState({searchOption: function(option){
+				return event.target.id === "sort-title" ? "title" : "genre"
+			}
+		})
 	}
   
 	render() {
