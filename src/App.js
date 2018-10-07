@@ -114,25 +114,30 @@ class App extends Component {
 			"runtime": 80
 			}
 			],
-			id: null
+			id: 0
 		}
 		this.pageChanger = this.pageChanger.bind(this);
+		this.backToSearch = this.backToSearch.bind(this);
 	}
 	
 	pageChanger(event){
-		let newId = event.target.id;
-		this.setState({page: 'film', id: {newId}})
+		let newId = +event.target.id;
+		this.setState({page: 'film', id: newId})
 	}
+	
+	backToSearch(){
+		this.setState({page: "search", id: 0});
+	}
+	
   render() {
 	  	
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">netflixroulette</h1>
-		  {(this.state.page === 'search') ? <Search /> : <FilmDetails movies={this.state.movies} filmId = {this.state.id}
-		  clickon={(event)=>this.pageChanger(event)}/>}
+		  {(this.state.page === 'search') ? <Search /> : <FilmDetails movies={this.state.movies} filmId = {this.state.id} search={this.backToSearch}/>}
         </header>
-		< Movies movies={this.state.movies}/>
+		< Movies movies={this.state.movies} clickon={(event)=>this.pageChanger(event)}/>
 		<footer className="App-footer">
 		<h1 className="App-title">netflixroulette</h1>
 		</footer>

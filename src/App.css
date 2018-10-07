@@ -106,6 +106,13 @@
 
 .film-poster-mini {
 	width: 300px;
+	cursor: pointer;
+}
+
+.film-poster-midi {
+	width: 200px;
+	float: right;
+	align-self: center;
 }
 
 .results-movies {
@@ -118,8 +125,58 @@
 	margin: 2.2em;
 }
 
+.film-details {
+	display: flex;
+	margin-left: 0.5em;
+}
 
+.film-info {
+	text-align: left;
+	margin-left: 3em;
+	max-width: 50%;
+}
 
+.film-details-title {
+	color: #dc143c;
+	font-size: 1.5em;
+	font-weight: bold;
+	display: inline-block;
+	margin-right: 1.5em;
+	margin-bottom: 0.5em;
+}
 
+.film-details-vote-average {
+	display: inline-block;
+	border: 1px solid white;
+	border-radius: 50%;
+	padding: 0.5em 0.8em;
+}
+
+.film-details-genre {
+	display: block;
+	margin-bottom: 0.5em;
+}
+
+.film-details-release-date,
+.film-details-runtime {
+	font-weight: bold;
+	margin-right: 0.8em;
+}
+
+.back-to-search {
+	margin-left: 20%;
+	color: #dc143c;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 0.3em 0.8em;
+	background-color: white;
+	cursor: pointer;
+	position: absolute;
+	top: 2em;
+	left: 45%;
+	
+	
+	
+}
 
 
