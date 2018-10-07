@@ -51,7 +51,7 @@ class Movies extends Component {
 			{this.state.movies.map(movie =>
 				<div key={movie.id} className="film" >
 				<img src={movie.poster_path} id={movie.id} onClick={this.props.clickon} className="film-poster-mini" alt="Movie poster"/><br />
-				<span className="film-title">{movie.title}</span><br />
+				<span className="film-title">{movie.title}</span>
 				<span className="film-release-date">{movie.release_date.split('-')[0]}</span><br />
 				<span className="film-genre">{movie.genres.join(' & ')}</span>
 			</div>)} 	

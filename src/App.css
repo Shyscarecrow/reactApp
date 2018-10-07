@@ -123,6 +123,29 @@
 .film {
 	content: justify;
 	margin: 2.2em;
+	text-align: left;
+}
+
+.film-title {
+	text-transform: uppercase;
+	display: inline-block;
+	font-weight: bold;
+	font-size: 0.75em;
+	margin: 1em 0;
+}
+
+.film-genre {
+	font-size: 0.8em;
+	color: grey;
+}
+
+.film-release-date {
+	border: 1px solid black;
+	padding: 0.1em 0.4em;
+	float: right;
+	font-size: 0.8em;
+	margin-top: 0.5em;
+	
 }
 
 .film-details {
